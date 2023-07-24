@@ -1,22 +1,15 @@
-import { Link } from "react-router-dom";
-
 export default function Card(props) {
+   const { name, status, species, gender, origin, image, onClose } = props
+
    return (
       <div>
-         <button onClick={props.onClose} id={props.id}>X</button>
-         <Link to={`/detail/${props.id}`}>
-            <h2>{props.name}</h2>
-         </Link>
-         <h2>{props.species}</h2>
-         <h2>{props.gender}</h2>
-         <img  src={props.image}/>
+         <button onClick={onClose}>X</button>
+         <h2>{name}</h2>
+         <h2>{status}</h2>
+         <h2>{species}</h2>
+         <h2>{gender}</h2>
+         <h2>{origin}</h2>
+         <img src={image} alt='' />
       </div>
    );
 }
-
-
-// name: Nombre
-// species: Especie
-// gender: Género
-// image: Imagen
-// onClose: La función que se va a ejecutar cuando el usuario haga click en el botón de cerrar.

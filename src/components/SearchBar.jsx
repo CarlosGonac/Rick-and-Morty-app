@@ -1,16 +1,9 @@
-import { useState } from "react";
-
 export default function SearchBar(props) {
-   const [ character, setCharacter ] = useState('')
-
-   const handlingChange = (e) => {
-      setCharacter(e.target.value)
-   }
-
+   const { onSearch } = props
    return (
       <div>
-         <input type='search' onChange={handlingChange} value={character} />
-         <button onClick={() => props.onSearch(character)}>Agregar</button>
+         <input type='search' />
+         <button onClick={onSearch}>Agregar</button>
       </div>
    );
 }

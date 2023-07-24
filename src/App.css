@@ -1,7 +1,5 @@
 .App {
    text-align: center;
-   padding: '25px';
-   background-image: url(./images/rick_y_morty_1.jpg_976912859.jpg);
-   background-size: cover;
-   height: 100vh;
+   background-color: rgb(46, 42, 42);
+   color: rgb(211, 180, 180)
 }
